@@ -1,0 +1,55 @@
+{
+  "name": "node-chatgpt-starter",
+  "version": "1.0.0",
+  "description": "A ChatGPT implementation using the official ChatGPT model via OpenAI's API.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "server": "node src/server.js",
+    "audit": "audit-ci --config .audit-ci.json",
+    "docker:build": "docker build . -t chatgpt-api",
+    "docker:run": "docker run --env-file=.env -p 4000:4000 chatgpt-api",
+    "docker:shell": "docker run --env-file=.env -it --entrypoint=sh chatgpt-api",
+    "compose:up": "docker-compose --env-file=.env up --build"
+  },
+  "author": "hochoy",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/telus/node-chatgpt-starter.git"
+  },
+  "keywords": [
+    "chatgpt",
+    "chatgpt-api",
+    "openai",
+    "openai-api",
+    "gpt",
+    "gpt3",
+    "gpt-3",
+    "api",
+    "api-wrapper"
+  ],
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "fastify": "^4.11.0",
+    "gpt-3-encoder": "^1.1.4",
+    "keyv": "^4.5.2",
+    "keyv-file": "^0.2.0",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "audit-ci": "^6.6.1"
+  },
+  "bugs": {
+    "url": "https://github.com/telus/node-chatgpt-starter/issues"
+  },
+  "homepage": "https://github.com/telus/node-chatgpt-starter#readme",
+  "directories": {
+    "doc": "docs"
+  }
+}
