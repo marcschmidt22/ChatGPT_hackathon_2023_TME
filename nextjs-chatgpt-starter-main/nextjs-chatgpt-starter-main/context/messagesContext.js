@@ -8,7 +8,7 @@ const MessagesDispatchContext = createContext(null);
 const initialMessages = [
   {
     messageId: "1" + uuidv4(),
-    messageText: "Hello from ChatGPT simulator",
+    messageText: "",
     messageType: "inbound",
   },
 ];
